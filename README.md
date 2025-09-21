@@ -34,7 +34,7 @@ pip install pandas matplotlib pytz
 ```
 
 ⚠️ **TA-Lib installation note**:  
-- **Windows**: download from [TA-Lib binaries](https://www.lfd.uci.edu/~gohlke/pythonlibs/#ta-lib) and install with pip.  
+- **Windows**: download from [TA-Lib binaries](https://technical-analysis-library-in-python.readthedocs.io/en/latest/) and install with pip.  
 - **Linux/Mac**:  
 ```bash
 sudo apt-get install -y build-essential
