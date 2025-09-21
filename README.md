@@ -64,6 +64,20 @@ These credentials are required in `config.py` (or inside the notebook).
 
 ---
 
+## 🔹 Handling Large Historical Data  
+
+When fetching historical OHLCV data from MT5, requesting a very long date range in a single call can cause **performance issues or incomplete data**. To handle this efficiently, this bot uses the following logic:
+
+### 1. `split_by_month`  
+- **Purpose**: Splits a large date range into **monthly chunks**.  
+- **Why**: MT5 API can fail or return incomplete data if too many candles are requested at once. By fetching data month by month, we ensure reliability and avoid API limits.  
+
+### 2. `get_candle_ranges`  
+- **Purpose**: Determines the number of candles for a given date range and timeframe.  
+- **Why**: If the number of candles exceeds MT5 limits, this function helps split the request into smaller, manageable chunks. This ensures **complete historical data retrieval** without errors.
+
+---
+
 ## 🔹 Installation  
 
 1. **Clone the repository**  
